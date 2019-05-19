@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // localStorage, sessionStorage, console.log
+      const map = new Map();
+
+      map.set("name", "park");
+      map.set("job", "developer");
+      console.log("TCL: map", map);
+
+      // console.log(map.get("name"));
+
+      for (let element of map) {
+        console.log(typeof element);
+        console.log(element);
+      }
+
+      // Map, WeakMap, Set -> Entry
+      // generator function
+      // React, Redux -> redux-thunk, redux-saga, redux-middleware, redux-pender
+      // React
+      // function* genFunc() {
+      //   yield();
+      // }
+      const newMap = new Map([["name", "park"], ["job", "developer"]]);
+      const entries = newMap.entries();
+      const keys = newMap.keys();
+      const values = newMap.values();
+      console.log("TCL: values", values);
+      console.log("TCL: keys", keys);
+      console.log(keys.next());
+      // console.log(entries.next());
+      // console.log(entries.next());
+      // console.log(entries.next());
+
+      // const newSet = new Set();
+      // newSet.add("name", "park");
+      // console.log("TCL: newSet", newSet);
+    </script>
+  </body>
+</html>
