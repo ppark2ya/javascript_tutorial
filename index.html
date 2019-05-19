@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./util.js"></script>
+    <script>
+      function Person() {
+        this.name = "park";
+        this.age = "30";
+        this.job = "programmer";
+      }
+
+      Person.prototype.getName = function(name) {
+        if (name) {
+          return name;
+        }
+        return this.name;
+      };
+
+      Person.prototype.getAge = function() {
+        return this.age;
+      };
+
+      var p = new Person();
+      // console.log("TCL: p.getName()", p.getName("lee"));
+
+      // 리터럴 object class
+      // 함수형 클래스
+      // 프로토타입 클래스
+
+      Util.Ajax.post({
+        name: "park",
+        function() {
+          console.log("hello");
+        }
+      });
+    </script>
+  </body>
+</html>
