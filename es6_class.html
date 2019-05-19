@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      class ExtendImage extends Image {
+        constructor() {
+          super();
+        }
+
+        setProperty(image) {
+          this.src = image.src;
+          this.alt = image.alt;
+          this.title = image.title;
+        }
+        // get getTotal() {
+        //   let total = 0;
+        //   for (let value of this) {
+        //     total += value;
+        //   }
+        //   return total;
+        // }
+      }
+
+      // const exArray = new ExtendArray();
+      // exArray.push(10, 20);
+
+      // console.log(exArray.getTotal);
+
+      let imageObj = new ExtendImage();
+      imageObj.setProperty({
+        src: "images/newbtn.bar.1.png",
+        alt: "이미지",
+        title: "버튼이미지"
+      });
+
+      // document.body.appendChild(imageObj);
+      Array.prototype.concat = function(arr2) {
+        console.log(arr2);
+      };
+
+      // exArray.concat([90, 40]);
+      // console.log("TCL: exArray.concat([90, 40])", exArray.concat([90, 40]))
+
+      const obj = {};
+      const arr = [];
+      const image = new Image();
+      // console.log("TCL: image", image);
+      const option = new Option();
+      // console.log("TCL: option", option);
+    </script>
+  </body>
+</html>
